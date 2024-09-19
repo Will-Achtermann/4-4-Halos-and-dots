@@ -30,12 +30,14 @@ def pointillism(image_name):
     canvas = Image.new("RGB",(image.size[0],image.size[1]), "white")
 
     for i in range(120000):
+            #random pixels and color
             x = random.randint(1, image.width-1)
             y = random.randint(1, image.height-1)
             red = pixels[x,y][0]
             blue = pixels[x,y][1]
             green = pixels[x,y][2]
 
+            #draws circles
             size = random.randint(5,8)
             ellipsebox=[(x,y),(x+size,y+size)]
             draw = ImageDraw.Draw(canvas)
